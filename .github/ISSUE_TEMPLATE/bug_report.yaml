@@ -1,0 +1,97 @@
+name: "🐞 Bug Report"
+description: "Report an issue."
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Project-Elixir Bug Report Instructions
+        - Your issue may have already been reported before, so please check for existing issues [here](https://github.com/Project-Elixir/issue_tracker/issues/labels/bug) before reporting any bugs.
+        - Make sure that you're on the latest Project-Elixir build for your device.
+        - Disable all your magisk modules/themes/skins/any other thing you're using that isn't included in the rom by default.
+        - Revert to built-in kernel if you're using something else.
+        - Make sure that you're on the latest firmware.
+        - Dropped devices will not get any support.
+        - Unofficial versions will not get any support.
+  
+  - type: dropdown
+    attributes: 
+      label: "Issue type"
+      description: "Type of the issue you want to describe."
+      options: 
+        - User interface
+        - Feature not working as intended
+        - Source code related
+        - Other
+    validations:
+      required: true
+  
+  - type: input
+    attributes: 
+      label: "Exact version and Build date"
+      description: "Exact elixir version with build date."
+      placeholder: "Example: v3.12 | 22-09-2023"
+    validations:
+      required: true
+  
+  - type: textarea
+    attributes:
+      label: "Bug Description"
+      description: "Simple description of the issue."
+    validations: 
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Steps to reproduce the issue."
+      placeholder: "Step 1. Bla bla bla Step 2. ..."
+    validations: 
+      required: true
+
+  - type: textarea
+    attributes:
+      label: "Relevant Log"
+      description: "Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks."
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Screenshots or Videos"
+      description: "Add screenshots or videos that show the bug here."
+      placeholder: "Drag and drop the screenshots/videos into this box."
+    validations: 
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Solution"
+      description: "If applicable add a possible solution."
+    validations: 
+      required: false
+
+  - type: textarea
+    attributes:
+      label: "Additional Context"
+      description: "Add any additional context if there is any."
+    validations: 
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: "Acknowledgements"
+      description: "Your issue will be closed if you haven't done these steps."
+      options: 
+        - label: "I have checked that the device is officially supported (for device specific reports and not source related)."
+          required: false
+        - label: "I am running the latest version available on projectelixiros.com for this device."
+          required: true
+        - label: "I have searched the existing issues and this is a new issue and not a duplicate of any another open issue."
+          required: true
+        - label: "I have written a short but informative title."
+          required: true
+        - label: "I have filled out all of the requested information in this issue properly."
+          required: true
